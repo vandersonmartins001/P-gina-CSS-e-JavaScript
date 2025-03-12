@@ -5,12 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sites Simples</title>
     <style>
-        /*definição do estilo da página*/
+        /*Definição do estilo da página*/
         body {
             font-family: Arial, sans-serif;/*Definir a fonte do texto*/
             text-align: center; /*Centralizar o texto na página*/
             margin: 50px;/*Definir uma margem ao redor do conteudo*/
-            
+            blackground-color:#f4f4f4;/*Define a cor de fundo padrão*/
+        }
+        /*Estilizar o botão*/
+        button{
+            padding:10px 20px;/*Definir o tamanho do botão*/
+            font-size:16px;/*Definir o tamanho da fonte do botão*/
+            cursor:pointer;/*Alterar o cursor ao passar sobre o botão*/
+            blackgroud-color:blue;/*Definir a cor de fundo*/
+            color:White;/Definir a cir texto do botão*/
+            border:none;/*Remover a borda do botão*/
+            border-radius:5px;/*Adicionar cantos arrendondados ao botão*/
         }
     </style>
 </head>
@@ -19,5 +29,14 @@
     <h1>Bem Vindo ao Meu Site Simples</h1>
     <!--Criando o Botão que mudará a cor de fundo da página-->
     <button onclick="mudarCor()">Mudar Cor de Fundo</button>
+    <script>
+        //função JavaScript para mudar a cor de fundo da página
+        function mudarCor(){
+            //Gerar uma cor aleatória em formato hexadecimal
+            var corAleatória = '#' + Math.floor(Math.random()*16777215).toString(16)
+            //Aplica nova cor ao fundo da página
+            document.body.style.blackgroud = corAleatória;
+        }
+    </script>
 </body>
 </html>
